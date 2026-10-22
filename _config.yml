@@ -1,0 +1,13 @@
+title: Gurutharuva
+description: You are the guiding star of your own life.
+url: https://www.gurutharuva.com
+permalink: /journal/:title/
+markdown: kramdown
+exclude:
+  - README.md
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

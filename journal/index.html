@@ -1,0 +1,33 @@
+---
+layout: default
+title: Journal
+summary: Articles by Darshana Godawaththa on the mind, business and wealth.
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Journal</p>
+    <h1>Notes on the mind, <em>business and wealth.</em></h1>
+    <p class="intro">Short, practical articles by Darshana Godawaththa, in English and <span class="si" lang="si">සිංහල</span>.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+{%- if site.posts.size > 0 %}
+    <div class="post-list">
+{%- for post in site.posts %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        {% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}
+        <span class="post-card-body">
+          <span class="eyebrow">{% if post.category %}{{ post.category }} · {% endif %}{{ post.date | date: "%-d %b %Y" }}</span>
+          <strong>{{ post.title }}</strong>
+          <span>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 30 }}</span>
+        </span>
+      </a>
+{%- endfor %}
+    </div>
+{%- else %}
+    <p class="post-empty">New articles are on their way. Until then, read the older ones on the <a href="https://gurutharuvajournal.blogspot.com/">Gurutharuva Journal blog</a>.</p>
+{%- endif %}
+  </div>
+</section>

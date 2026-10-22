@@ -198,20 +198,18 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* Bold motto band (from Direction B) */
-.motto { background: var(--yellow); padding: 64px var(--gutter); }
+.motto { background: var(--yellow); padding: 36px var(--gutter); }
 .motto .wrap { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px; }
 .motto h2 {
   margin: 0;
-  font-family: var(--bold);
+  font-family: var(--serif);
   font-weight: 400;
-  text-transform: uppercase;
-  font-size: clamp(56px, 9vw, 140px);
-  line-height: 0.92;
-  letter-spacing: 0.005em;
+  font-size: clamp(26px, 3.4vw, 44px);
+  line-height: 1.2;
   color: var(--navy);
 }
-.motto h2 span { display: block; }
-.motto h2 .outline { color: var(--white); -webkit-text-stroke: 3px var(--navy); paint-order: stroke fill; }
+.motto h2 span { display: inline; }
+.motto h2 .outline { color: var(--ink-soft); }
 .motto p { margin: 0; max-width: 30ch; font-size: 18px; font-weight: 600; }
 .motto p small { display: block; margin-top: 10px; font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
 
@@ -463,3 +461,40 @@ h1, h2, h3 { text-wrap: balance; }
 .footer-col a { text-decoration: none; }
 .footer-col a:hover { color: var(--yellow); }
 .copyright { margin: 40px 0 0; padding-top: 20px; border-top: 1px solid #222B44; font-size: 14px; }
+
+/* Journal */
+.post-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+.post-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-radius: 18px; overflow: hidden; background: var(--tint); transition: transform .25s ease, box-shadow .25s ease; }
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 16px 36px rgba(19,26,43,0.14); }
+.post-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.post-card-body { display: flex; flex-direction: column; gap: 10px; padding: 24px 26px 28px; }
+.post-card .eyebrow { margin: 0; letter-spacing: 0.12em; }
+.post-card strong { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.15; }
+.post-card-body > span:last-child { color: var(--ink-soft); }
+.post-empty { font-size: 18px; color: var(--ink-soft); }
+.post-hero .eyebrow a { color: inherit; text-decoration: none; }
+.post-hero h1 { max-width: 22ch; }
+.post-date { margin: 16px 0 0; color: var(--on-navy-soft); }
+.post-wrap { max-width: 760px; }
+.post-cover { width: 100%; border-radius: 18px; margin-bottom: 32px; }
+.post-body { font-size: 18px; line-height: 1.7; }
+.post-body h2, .post-body h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; margin: 1.6em 0 .5em; }
+.post-body h2 { font-size: 32px; }
+.post-body h3 { font-size: 25px; }
+.post-body img { max-width: 100%; height: auto; border-radius: 12px; }
+.post-body blockquote { margin: 1.5em 0; padding-left: 20px; border-left: 4px solid var(--yellow); font-family: var(--serif); font-size: 22px; }
+.post-body a { color: var(--gold-text); }
+.post-back { margin-top: 48px; font-weight: 700; }
+
+/* Live seat map for programmes with a seat limit */
+.seat-map { margin: 24px 0 4px; }
+.seat-map-label { margin: 0 0 10px; font-size: 16px; color: var(--on-navy-soft); }
+.seat-map-label strong { color: var(--yellow); font-size: 20px; }
+.seat-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; max-width: 360px; }
+.seat-grid span { aspect-ratio: 1; border-radius: 5px; border: 1.5px solid var(--yellow); transition: background-color .4s ease; }
+.seat-grid span.is-taken { background: var(--yellow); }
+.seat-map--compact { margin: 8px 0 16px; }
+.seat-map--compact .seat-grid { max-width: none; }
+.interest-done .btn { justify-content: center; margin-top: 8px; }
+.interest-when { display: flex; flex-direction: column; gap: 6px; }
+.interest-when[hidden] { display: none; }

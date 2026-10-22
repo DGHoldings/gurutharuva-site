@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -21,10 +23,8 @@
     </a>
     <nav class="main-nav" id="main-nav" aria-label="Main">
       <a href="programs/">Programmes</a>
-      <a href="programs/business-therapy/">Business Therapy</a>
-      <a href="#mentor">Mentor</a>
       <a href="free-guides-pdfs/">Free Guides</a>
-      <a href="https://gurutharuvajournal.blogspot.com/">Journal</a>
+      <a href="journal/">Journal</a>
       <a href="publications/">Publications</a>
     </nav>
     <a class="btn btn--yellow header-cta" href="https://wa.me/94715507060">
@@ -45,7 +45,7 @@
         <p class="tagline-si si" lang="si">ජීවිතයට පාර කියන ගුරු තරුව ඔබමයි.</p>
         <p class="intro">Personal Development, Entrepreneurship &amp; Wealth Creation, taught as one journey by NLP coach and entrepreneur Darshana Godawaththa.</p>
         <div class="btn-row">
-          <a class="btn btn--yellow" href="https://chat.whatsapp.com/EMhjgNsMxB8JaW9aqIjuXA" target="_blank" rel="noopener">Join the next Business Therapy batch</a>
+          <button class="btn btn--yellow" type="button" data-enrol="business-therapy" data-name="Business Therapy" data-whatsapp="https://chat.whatsapp.com/EMhjgNsMxB8JaW9aqIjuXA">Book your seat in Business Therapy</button>
           <a class="btn btn--ghost" href="programs/">Explore the programmes</a>
         </div>
       </div>
@@ -54,7 +54,7 @@
         <div class="cohort-card">
           <p class="eyebrow">Next batch</p>
           <strong>Business Therapy starts [START DATE]</strong>
-          <span>Limited to 30 students</span>
+          <span data-seats-text="business-therapy">Limited to 30 students</span>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
 
   <section class="motto" aria-label="Our motto">
     <div class="wrap">
-      <h2><span>Solve it or leave it.</span><span class="outline">Don't live with it.</span></h2>
+      <h2><span>Solve it or leave it.</span> <span class="outline">Don't live with it.</span></h2>
     </div>
   </section>
 
@@ -91,8 +91,8 @@
             <h3>Business Therapy</h3>
             <p class="tag">Start. Fix. Grow.</p>
             <p class="desc">From business registration to your website and your first customer, get the practical guidance you need to bring your business to life.</p>
-            <p class="price">LKR 10,000 · Enrolling now</p>
-            <a class="btn btn--yellow" href="https://chat.whatsapp.com/EMhjgNsMxB8JaW9aqIjuXA" target="_blank" rel="noopener">Join the WhatsApp group</a>
+            <p class="price">LKR 15,000 · <span data-seats-text="business-therapy">Enrolling now</span></p>
+            <button class="btn btn--yellow" type="button" data-enrol="business-therapy" data-name="Business Therapy" data-whatsapp="https://chat.whatsapp.com/EMhjgNsMxB8JaW9aqIjuXA">Book your seat</button>
             <a class="prog-link" href="programs/#business-therapy">Learn more</a>
           </div>
         </article>
@@ -115,26 +115,26 @@
         <div class="coaching-intro">
           <p class="step">1-to-1 coaching</p>
           <h3>Personal coaching sessions</h3>
-          <p>Private one-hour sessions with Darshana, focused on your own problem. The recorded video course is included free.</p>
+          <p>Private one-hour sessions with Darshana, focused on your own problem.</p>
         </div>
         <ul class="packages">
           <li>
             <strong>Find Your Direction</strong>
             <span class="sessions">1 session</span>
             <span class="cost">LKR 6,000</span>
-            <a class="btn btn--outline" href="https://wa.me/94715507060">Book</a>
+            <button class="btn btn--outline" type="button" data-book="coaching" data-package="Find Your Direction · 1 session · LKR 6,000">Book</button>
           </li>
           <li class="is-popular">
             <strong>Rewire &amp; Rise</strong>
             <span class="sessions">3 sessions · LKR 5,500 each</span>
             <span class="cost">LKR 16,500</span>
-            <a class="btn btn--navy" href="https://wa.me/94715507060">Book</a>
+            <button class="btn btn--navy" type="button" data-book="coaching" data-package="Rewire &amp; Rise · 3 sessions · LKR 16,500">Book</button>
           </li>
           <li>
             <strong>Complete Rewire</strong>
             <span class="sessions">6 sessions · LKR 5,000 each</span>
             <span class="cost">LKR 30,000</span>
-            <a class="btn btn--outline" href="https://wa.me/94715507060">Book</a>
+            <button class="btn btn--outline" type="button" data-book="coaching" data-package="Complete Rewire · 6 sessions · LKR 30,000">Book</button>
           </li>
         </ul>
       </div>
@@ -146,13 +146,14 @@
       <div class="bt-copy">
         <p class="eyebrow">Now enrolling</p>
         <h2 class="h2">Most programmes teach what to do. We teach who you need to become.</h2>
-        <p class="lede">Business Therapy combines the inner game with the outer work. Weeks 1 and 2 change how you think and decide. Weeks 3 and 4 build the business itself.</p>
+        <p class="lede">Business Therapy combines the inner game with the outer work. Live on Zoom, 2 hours a day for 4 weeks. Weeks 1 and 2 change how you think and decide. Weeks 3 and 4 build the business itself.</p>
         <div class="facts">
-          <div><p class="k">Investment</p><p class="v">LKR 10,000</p></div>
-          <div><p class="k">Format</p><p class="v">4 × 2-hour live</p></div>
+          <div><p class="k">Investment</p><p class="v">LKR 15,000</p></div>
+          <div><p class="k">Format</p><p class="v">2 hrs a day · 4 weeks</p></div>
           <div><p class="k">Class size</p><p class="v">30 seats</p></div>
         </div>
-        <div class="btn-row"><a class="btn btn--yellow" href="programs/business-therapy/">See the full programme</a></div>
+        <div class="seat-map" data-seats="business-therapy" hidden></div>
+        <div class="btn-row"><button class="btn btn--yellow" type="button" data-enrol="business-therapy" data-name="Business Therapy" data-whatsapp="https://chat.whatsapp.com/EMhjgNsMxB8JaW9aqIjuXA">Book your seat</button><a class="btn btn--ghost" href="programs/#business-therapy">See the full programme</a></div>
       </div>
       <ol class="weeks">
         <li><span class="wk">WK 1</span><span><strong>The Clarity</strong><span>Find the business that fits you, validate it with real people, register it.</span></span></li>
@@ -204,11 +205,17 @@
     <div class="wrap">
       <div class="journal-head">
         <h2>From the journal</h2>
-        <a href="https://gurutharuvajournal.blogspot.com/">All articles</a>
+        <a href="journal/">All articles</a>
       </div>
-      <a class="article" href="articles/neuro-linguistic-programming/"><span class="eyebrow">NLP</span><strong>What is NLP, and why understanding your mind changes everything</strong><span>You are not reacting to reality. You are reacting to your version of it.</span></a>
-      <a class="article" href="articles/manifestation/"><span class="eyebrow">Mindset</span><strong>Manifestation: why most people get it wrong</strong><span>You don't attract what you want. You attract what you are.</span></a>
-      <a class="article" href="articles/business-dna-prompt/"><span class="eyebrow">Business · English &amp; සිංහල</span><strong>Business DNA: why most people choose the wrong business</strong><span>Meet the Holland Code, and find the work that gives you energy.</span></a>
+{%- if site.posts.size > 0 %}
+{%- for post in site.posts limit:3 %}
+      <a class="article" href="{{ post.url | relative_url }}">{% if post.category %}<span class="eyebrow">{{ post.category }}</span>{% endif %}<strong>{{ post.title }}</strong><span>{{ post.summary | default: post.excerpt | strip_html | truncatewords: 22 }}</span></a>
+{%- endfor %}
+{%- else %}
+      <a class="article" href="https://gurutharuvajournal.blogspot.com/"><span class="eyebrow">NLP</span><strong>What is NLP, and why understanding your mind changes everything</strong><span>You are not reacting to reality. You are reacting to your version of it.</span></a>
+      <a class="article" href="https://gurutharuvajournal.blogspot.com/"><span class="eyebrow">Mindset</span><strong>Manifestation: why most people get it wrong</strong><span>You don't attract what you want. You attract what you are.</span></a>
+      <a class="article" href="https://gurutharuvajournal.blogspot.com/"><span class="eyebrow">Business · English &amp; සිංහල</span><strong>Business DNA: why most people choose the wrong business</strong><span>Meet the Holland Code, and find the work that gives you energy.</span></a>
+{%- endif %}
     </div>
   </section>
 
@@ -243,7 +250,7 @@
       <div class="footer-col">
         <strong>Programmes</strong>
         <a href="programs/#mirror-clinic">Mirror Clinic</a>
-        <a href="programs/business-therapy/">Business Therapy</a>
+        <a href="programs/#business-therapy">Business Therapy</a>
         <a href="programs/#wealth-code">Wealth Code</a>
         <a href="programs/#coaching">1-to-1 Coaching</a>
       </div>
@@ -270,24 +277,26 @@
   <form id="interest-form" novalidate>
     <button class="interest-close" type="button" aria-label="Close" data-close>×</button>
     <div class="interest-fields">
-      <p class="eyebrow">Register interest</p>
+      <p class="eyebrow" id="interest-eyebrow">Register interest</p>
       <h2 id="interest-title">Wealth Code</h2>
-      <p class="interest-lede">Leave your details and we'll tell you first when the programme opens.</p>
-      <input type="hidden" name="programme" id="interest-programme" value="Wealth Code">
+      <p class="interest-lede" id="interest-lede">Leave your details and we'll tell you first when the programme opens.</p>
       <label for="interest-name">Your name</label>
-      <input id="interest-name" name="name" type="text" autocomplete="name" required>
+      <input id="interest-name" name="name" type="text" autocomplete="name" maxlength="120" required>
       <label for="interest-whatsapp">WhatsApp number</label>
-      <input id="interest-whatsapp" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="07X XXX XXXX" required>
+      <input id="interest-whatsapp" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" placeholder="07X XXX XXXX" maxlength="30" required>
       <label for="interest-email">Email <span>(optional)</span></label>
-      <input id="interest-email" name="email" type="email" autocomplete="email">
+      <input id="interest-email" name="email" type="email" autocomplete="email" maxlength="200">
+      <div class="interest-when" id="interest-when-wrap" hidden><label for="interest-when">Which days and times suit you? <span>(optional)</span></label>
+      <input id="interest-when" name="when" type="text" maxlength="200" placeholder="e.g. weekday evenings after 7pm"></div>
       <div class="hp" aria-hidden="true"><label for="interest-website">Website</label><input id="interest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
       <p class="interest-error" id="interest-error" role="alert" hidden></p>
-      <button class="btn btn--navy" type="submit">Register my interest</button>
-      <p class="interest-consent">We'll only use your details to tell you about this programme. You can ask us to remove them at any time.</p>
+      <button class="btn btn--navy" type="submit" id="interest-submit">Register my interest</button>
+      <p class="interest-consent">We'll only use your details for this programme. You can ask us to remove them at any time.</p>
     </div>
     <div class="interest-done" id="interest-done" hidden>
-      <h2>Thank you!</h2>
-      <p>You're on the list. We'll message you on WhatsApp when the programme opens.</p>
+      <h2 id="interest-done-title">Thank you!</h2>
+      <p id="interest-done-text">You're on the list. We'll message you on WhatsApp when the programme opens.</p>
+      <a class="btn btn--yellow" id="interest-done-link" href="#" target="_blank" rel="noopener" hidden>Join the WhatsApp group</a>
       <button class="btn btn--navy" type="button" data-close>Close</button>
     </div>
   </form>

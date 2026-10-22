@@ -1,0 +1,35 @@
+# Settings for the Journal editor at https://app.pagescms.org
+media:
+  input: assets/img/journal
+  output: /assets/img/journal
+content:
+  - name: journal
+    label: Journal
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, category]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: string
+        description: "One or two words, e.g. Mindset, NLP, Business"
+      - name: summary
+        label: Short summary
+        type: text
+        description: "One or two sentences shown on the journal list and home page"
+      - name: image
+        label: Cover image
+        type: image
+      - name: body
+        label: Post
+        type: rich-text

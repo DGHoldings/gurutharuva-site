@@ -1,0 +1,60 @@
+.admin { background: #F6F5EF; }
+.admin-bar { background: var(--navy); color: var(--on-navy); padding: 14px 0; }
+.admin-bar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.admin-bar .brand { color: var(--white); }
+.admin-user { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--on-navy-soft); }
+.admin-user .btn { min-height: 38px; padding: 0 16px; }
+.admin-main { padding-top: 32px; padding-bottom: 80px; display: flex; flex-direction: column; gap: 40px; }
+.admin-main h1 { margin: 0 0 8px; font-family: var(--serif); font-weight: 400; font-size: 34px; }
+.admin-hint { margin: 0 0 16px; color: var(--ink-soft); max-width: 75ch; }
+.admin-msg { margin: 0; padding: 12px 16px; border-radius: 12px; background: var(--tint); font-weight: 600; }
+.admin-msg.is-error { background: #FBE3E3; color: #8A1010; }
+.admin-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.admin-login { max-width: 420px; }
+.admin-login form, .add-person form { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.admin input, .admin select { font: inherit; padding: 10px 12px; border: 1px solid #CFCBB8; border-radius: 10px; background: var(--white); min-width: 0; }
+.admin label { font-weight: 700; font-size: 14px; }
+.prog-admin { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.prog-admin form { display: flex; flex-direction: column; gap: 8px; }
+.prog-admin h2 { margin: 0; font-family: var(--bold); font-weight: 400; text-transform: uppercase; font-size: 26px; }
+.prog-admin .count { margin: 0 0 6px; font-size: 15px; color: var(--ink-soft); }
+.prog-admin .count b { font-size: 22px; color: var(--ink); }
+.prog-admin .row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.prog-admin .row label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.prog-admin .check { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; }
+.prog-admin .btn, .add-person .btn { justify-content: center; min-height: 42px; }
+.list-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+.list-tools { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.list-tools .btn { min-height: 42px; }
+.table-wrap { overflow-x: auto; background: var(--white); border: 1px solid var(--line); border-radius: 16px; }
+.signups { width: 100%; border-collapse: collapse; font-size: 15px; }
+.signups th, .signups td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.signups th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); }
+.signups tr:last-child td { border-bottom: 0; }
+.signups td.empty { text-align: center; color: var(--ink-soft); padding: 32px; }
+.signups select { padding: 6px 8px; }
+.signups .del { border: 0; background: none; color: #A11; font-weight: 700; cursor: pointer; }
+.status-paid { color: #1D6B2E; }
+.add-person { margin-top: 16px; }
+.add-person summary { cursor: pointer; font-weight: 700; }
+@media (min-width: 900px) { .add-person form { flex-direction: row; flex-wrap: wrap; } .add-person input { flex: 1 1 160px; } }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; margin: 12px 0 16px; }
+.stat { background: var(--navy); color: var(--on-navy); border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 2px; }
+.stat span { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--on-navy-soft); }
+.stat b { font-family: var(--bold); font-weight: 400; font-size: 40px; color: var(--yellow); line-height: 1.1; }
+.stat small { color: var(--on-navy-soft); }
+.plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.plan h2 { margin: 0 0 12px; font-family: var(--serif); font-weight: 400; font-size: 24px; }
+.todo, .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.todo li, .timeline li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.todo li:last-child, .timeline li:last-child { border-bottom: 0; }
+.todo a { margin-left: 6px; font-weight: 700; color: var(--gold-text); }
+.timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 12px; }
+.timeline time { font-weight: 700; }
+.todo .none, .timeline .none { display: block; color: var(--ink-soft); }
+.signups small { color: var(--ink-soft); }
+.signups input[type="datetime-local"] { padding: 6px 8px; }
+.admin .wrap { padding-inline: max(16px, var(--gutter)); box-sizing: border-box; }
+.prog-admin input { width: 100%; box-sizing: border-box; }
+.prog-admin .check input { width: auto; }
+.admin-main section { min-width: 0; }

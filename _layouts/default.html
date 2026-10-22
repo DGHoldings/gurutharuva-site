@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} | {% endif %}Gurutharuva Journal</title>
+<meta name="description" content="{{ page.summary | default: page.description | default: site.description | strip_html | escape }}">
+{% if page.image %}<meta property="og:image" content="{{ page.image | absolute_url }}">{% endif %}
+<link rel="icon" href="{{ "/assets/img/logo.png" | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Gloock&family=Figtree:wght@400;500;600;700;800&family=Noto+Serif+Sinhala:wght@400;600&display=swap">
+<link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="{{ "/" | relative_url }}">
+      <img src="{{ "/assets/" | relative_url }}img/logo.png" alt="">
+      <span><b>Gurutharuva</b><small>ගුරුතරුව</small></span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <a href="{{ "/programs/" | relative_url }}">Programmes</a>
+      <a href="{{ "/" | relative_url }}free-guides-pdfs/">Free Guides</a>
+      <a href="{{ "/journal/" | relative_url }}" aria-current="page">Journal</a>
+      <a href="{{ "/" | relative_url }}publications/">Publications</a>
+    </nav>
+    <a class="btn btn--yellow header-cta" href="https://wa.me/94715507060">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>
+      <span>Talk on WhatsApp</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ready">
+      <div>
+        <h2>Ready to start?</h2>
+        <p>WhatsApp +94 71 550 7060 · gurutharuva@gmail.com</p>
+      </div>
+      <a class="btn btn--yellow" href="https://wa.me/94715507060">Message us on WhatsApp</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-brand">
+        <a class="brand" href="{{ "/" | relative_url }}"><img src="{{ "/assets/" | relative_url }}img/logo.png" alt=""><span><b>Gurutharuva</b></span></a>
+        <p class="si" lang="si">ජීවිතයට පාර කියන ගුරු තරුව ඔබමයි.</p>
+        <p>You are the guiding star of your own life.</p>
+      </div>
+      <div class="footer-col">
+        <strong>Programmes</strong>
+        <a href="{{ "/programs/#mirror-clinic" | relative_url }}">Mirror Clinic</a>
+        <a href="{{ "/programs/#business-therapy" | relative_url }}">Business Therapy</a>
+        <a href="{{ "/programs/#wealth-code" | relative_url }}">Wealth Code</a>
+        <a href="{{ "/programs/#coaching" | relative_url }}">1-to-1 Coaching</a>
+      </div>
+      <div class="footer-col">
+        <strong>Follow</strong>
+        <a href="https://www.facebook.com/gurutharuvalk">Facebook</a>
+        <a href="https://www.instagram.com/gurutharuva">Instagram</a>
+        <a href="https://www.tiktok.com/@gurutharuva">TikTok</a>
+        <a href="https://www.youtube.com/@Gurutharuva">YouTube</a>
+        <a href="https://www.linkedin.com/in/darshana-godawaththa-%E8%BE%BE%E7%88%BD-7699941b2/">LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <strong>Contact</strong>
+        <span>gurutharuva@gmail.com</span>
+        <span>+94 71 550 7060</span>
+        <a href="https://wa.me/94715507060" style="color: var(--yellow); font-weight: 700">WhatsApp us</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Gurutharuva. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="{{ "/js/main.js" | relative_url }}"></script>
+</body>
+</html>

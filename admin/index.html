@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bookings admin | Gurutharuva</title>
+<link rel="icon" href="../assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Gloock&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin">
+
+<header class="admin-bar">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/img/logo.png" alt=""><span><b>Gurutharuva</b><small>Bookings</small></span></a>
+    <div class="admin-user" id="admin-user" hidden><span id="admin-email"></span><button class="btn btn--ghost" type="button" id="sign-out">Sign out</button></div>
+  </div>
+</header>
+
+<main class="wrap admin-main">
+  <p class="admin-msg" id="admin-msg" role="status" hidden></p>
+
+  <section class="admin-card admin-login" id="login" hidden>
+    <h1>Sign in</h1>
+    <p>Enter your admin email. We'll send you a sign-in link.</p>
+    <form id="login-form">
+      <label for="login-email">Email</label>
+      <input id="login-email" type="email" autocomplete="email" required placeholder="gurutharuva@gmail.com">
+      <button class="btn btn--navy" type="submit">Email me a sign-in link</button>
+    </form>
+  </section>
+
+  <div id="dashboard" hidden>
+    <section>
+      <h1>Overview</h1>
+      <div class="stats" id="stats"></div>
+      <div class="plan">
+        <div class="admin-card">
+          <h2>Needs your attention</h2>
+          <ul class="todo" id="attention"></ul>
+        </div>
+        <div class="admin-card">
+          <h2>Coming up</h2>
+          <ul class="timeline" id="upcoming"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h1>Programmes</h1>
+      <p class="admin-hint">Seats count people marked <b>Reserved</b> or <b>Paid</b> in the current batch. To start a new batch, change the batch name (for example "Batch 2"): the seat map on the website starts again from zero, and earlier bookings stay listed below.</p>
+      <div class="prog-admin" id="programmes"></div>
+    </section>
+
+    <section>
+      <div class="list-head">
+        <h1>Sign-ups</h1>
+        <div class="list-tools">
+          <select id="filter-programme" aria-label="Programme"></select>
+          <select id="filter-batch" aria-label="Batch"></select>
+          <select id="filter-status" aria-label="Status">
+            <option value="">All statuses</option>
+            <option value="reserved">Reserved</option>
+            <option value="paid">Paid</option>
+            <option value="waitlist">Waiting list</option>
+            <option value="interested">Interested</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+          <button class="btn btn--outline" type="button" id="download">Download CSV</button>
+        </div>
+      </div>
+      <p class="admin-hint" id="list-summary"></p>
+      <div class="table-wrap">
+        <table class="signups">
+          <thead><tr><th>Date</th><th>Name</th><th>WhatsApp</th><th>Email</th><th>Programme</th><th>Coaching session</th><th>Status</th><th></th></tr></thead>
+          <tbody id="signup-rows"></tbody>
+        </table>
+      </div>
+
+      <details class="admin-card add-person">
+        <summary>Add someone yourself</summary>
+        <form id="add-form">
+          <select id="add-programme" aria-label="Programme" required></select>
+          <input id="add-name" placeholder="Name" required maxlength="120">
+          <input id="add-whatsapp" placeholder="WhatsApp" required maxlength="30">
+          <input id="add-email" type="email" placeholder="Email (optional)" maxlength="200">
+          <select id="add-status" aria-label="Status">
+            <option value="reserved">Reserved</option>
+            <option value="paid">Paid</option>
+            <option value="waitlist">Waiting list</option>
+            <option value="interested">Interested</option>
+          </select>
+          <button class="btn btn--navy" type="submit">Add</button>
+        </form>
+      </details>
+    </section>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
