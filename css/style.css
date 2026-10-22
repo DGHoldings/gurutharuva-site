@@ -243,6 +243,21 @@ h1, h2, h3 { text-wrap: balance; }
 .program--feature { background: var(--navy); color: var(--white); border-color: var(--navy); box-shadow: 0 20px 44px rgba(19,26,43,0.22); }
 .program--feature .step, .program--feature .tag, .program--feature .price { color: var(--yellow); }
 .program--feature .desc { color: var(--on-navy-soft); }
+/* Mirror Clinic and Wealth Code: a light tint of the banner colour, filling to the full banner colour on hover */
+.program--mirror, .program--wealth { transition: background-color .35s ease, border-color .35s ease, box-shadow .35s ease, transform .35s ease; }
+.program--mirror .body *, .program--wealth .body * { transition: color .35s ease, background-color .35s ease, border-color .35s ease; }
+.program--mirror { --banner: #E2D35C; background: #FAF5D4; border-color: #EDE3A0; }
+.program--wealth { --banner: #C40001; background: #FBEAEA; border-color: #F0C4C4; }
+.program--mirror:hover, .program--wealth:hover { background: var(--banner); border-color: var(--banner); transform: translateY(-4px); }
+.program--mirror:hover { box-shadow: 0 20px 44px rgba(150,135,30,0.28); }
+.program--mirror:hover .step, .program--mirror:hover .tag, .program--mirror:hover .prog-link { color: var(--navy); }
+.program--mirror:hover .desc { color: var(--ink); }
+.program--wealth:hover { box-shadow: 0 20px 44px rgba(196,0,1,0.28); color: var(--white); }
+.program--wealth:hover .step, .program--wealth:hover .tag, .program--wealth:hover .prog-link { color: var(--yellow); }
+.program--wealth:hover .desc { color: #FFE3E3; }
+.program--wealth:hover .btn--outline { border-color: var(--white); color: var(--white); }
+.program--wealth:hover .btn--outline:hover { background: var(--white); color: #C40001; }
+@media (prefers-reduced-motion: reduce) { .program--mirror, .program--wealth { transition: none; } .program--mirror:hover, .program--wealth:hover { transform: none; } }
 /* 1-to-1 coaching row under the programme cards */
 .coaching {
   margin-top: 24px;
