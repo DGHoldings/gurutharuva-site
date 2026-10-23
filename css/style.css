@@ -498,3 +498,16 @@ h1, h2, h3 { text-wrap: balance; }
 .interest-done .btn { justify-content: center; margin-top: 8px; }
 .interest-when { display: flex; flex-direction: column; gap: 6px; }
 .interest-when[hidden] { display: none; }
+
+/* About Darshana */
+.about .wrap { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; }
+.about-photo { flex: 1 1 320px; min-width: 0; display: flex; justify-content: center; position: sticky; top: 24px; }
+.about-photo img { width: min(100%, 400px); aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 24px; background: #C9CACC; }
+.about-body { flex: 1 1 520px; min-width: 0; max-width: 68ch; font-size: 18px; line-height: 1.7; color: #3A4158; }
+.about-body p { margin: 0 0 20px; }
+.about-lead { font-family: var(--serif); font-size: 26px; line-height: 1.35; color: var(--ink); }
+.about-question { font-family: var(--serif); font-size: 24px; line-height: 1.35; color: var(--ink); padding-left: 20px; border-left: 4px solid var(--yellow); }
+.about-body .chips { margin: 4px 0 24px; }
+.about-body blockquote { margin: 0 0 32px; font-family: var(--serif); font-size: 28px; line-height: 1.3; color: var(--ink); }
+.mentor-more { display: inline-block; margin-top: 20px; font-weight: 700; color: var(--gold-text); }
+@media (max-width: 900px) { .about-photo { position: static; } }
