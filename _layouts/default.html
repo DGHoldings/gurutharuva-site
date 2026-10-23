@@ -23,7 +23,7 @@
     <nav class="main-nav" id="main-nav" aria-label="Main">
       <a href="{{ "/programs/" | relative_url }}">Programmes</a>
       <a href="{{ "/" | relative_url }}free-guides-pdfs/">Free Guides</a>
-      <a href="{{ "/journal/" | relative_url }}" aria-current="page">Journal</a>
+      <a href="{{ "/journal/" | relative_url }}"{% if page.url contains "/journal/" %} aria-current="page"{% endif %}>Journal</a>
       <a href="{{ "/" | relative_url }}publications/">Publications</a>
     </nav>
     <a class="btn btn--yellow header-cta" href="https://wa.me/94715507060">
